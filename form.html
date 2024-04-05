@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="group.css">
+    <style>
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .order-summary {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .order-summary h2 {
+            margin-top: 0;
+        }
+        .order-item {
+            margin-bottom: 10px;
+        }
+        .required {
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+
+        <div class="logo"> 
+            <img src="climate_action.png" alt="climate change logo ">
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="https://w1996480.users.ecs.westminster.ac.uk/website/home.html" class="active"> Home</a></li>
+                <li><a href="content.html">content 1</a></li>
+                <li><a href="content2.html">content 2</a></li>
+                <li><a href="content3.html">content 3</a></li>
+                <li><a href="content4.html">content 4</a></li>
+            </ul>
+        </nav>
+        </header>
+        <main>
+            <section class="mission".>
+                <h1> Our Mission</h1>
+                <p> Welcome to our climate Change Website. We are commited to identifying and reducing the effects of climate change on our planet</p>
+            </section>
+        </main>
+    
+    <div class="container">
+        <h1>Checkout</h1>
+
+        <!-- Order Summary Section -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="orderDescription">
+                <!-- Order details will be dynamically populated here -->
+            </div>
+        </div>
+
+        <!-- Payment and Contact Information Form -->
+        <form id="checkoutForm" onsubmit="thankYouAndRedirect(); return false;">
+            <h2>Payment and Contact Information</h2>
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Billing Address</label>
+            <textarea id="address" name="address" placeholder="Enter your billing address"></textarea>
+
+            <h2>Payment Details</h2>
+            <label for="cardNumber">Card Number <span class="required">*</span></label>
+            <input type="text" id="cardNumber" name="cardNumber" required placeholder="Enter your card number">
+
+            <label for="expiryDate">Expiry Date <span class="required">*</span></label>
+            <input type="text" id="expiryDate" name="expiryDate" required placeholder="MM/YY">
+
+            <label for="cvv">CVV <span class="required">*</span></label>
+            <input type="text" id="cvv" name="cvv" required placeholder="Enter CVV">
+
+            <!-- Add more card details fields as needed -->
+
+            <input type="submit" value="Place Order">
+        </form>
+        <form onsubmit="submitForm()">
+            <!-- Form fields -->
+        </form>
+        
+    </div>
+
+    <script>
+        // Function to display a thank you message and redirect to the previous page
+        function thankYouAndRedirect() {
+            // Display thank you message
+            window.alert('Thank you for shopping with us!');
+
+            // Redirect to the previous page
+            window.history.back();
+        
+        }
+        
+            function submitForm() {
+                // Your form submission logic here
+                
+                // Redirect to previous page
+                history.back();
+            }
+      
+        
+
+        // Function to retrieve order details from localStorage and display in order summary
+        function displayOrderSummary() {
+            var orderDescription = document.getElementById('orderDescription');
+            var orderItems = JSON.parse(localStorage.getItem('orderItems'));
+
+            if (orderItems && orderItems.length > 0) {
+                orderDescription.innerHTML = ''; // Clear previous content
+
+                orderItems.forEach(function(item) {
+                    var itemDiv = document.createElement('div');
+                    itemDiv.classList.add('order-item');
+                    itemDiv.innerHTML = `
+                        <strong>${item.productName}</strong> - ${item.price}<br>
+                        Quantity: ${item.quantity}<br>
+                        Description: ${item.description}<br><br>
+                    `;
+                    orderDescription.appendChild(itemDiv);
+                });
+            } else {
+                orderDescription.innerHTML = '<p>No items in the order.</p>';
+            }
+        }
+
+        // Call the function to display order summary when the page loads
+        displayOrderSummary();
+    </script>
+</body>
+</html>

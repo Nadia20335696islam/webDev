@@ -1,0 +1,133 @@
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1;
+  background-color: #e8f5e9;
+  color: #080808;
+}
+
+
+.navbar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img{
+  height: 50px;
+}
+
+header{
+  background-color: #2e7d32;
+  color:white;
+  padding: 1rem;
+  display:flex;
+  justify-content:space-between ;
+  align-items: center;
+}
+#goToTopBtn{
+  display: none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index: 99;
+  background-color: #007bff;
+  color: white;
+  border:none;
+  border-radius: 50%;
+  padding:15px;
+  font: size 16px;
+  cursor: pointer;
+}
+
+#goToTopBtn:hover{
+  background-color: #555;
+}
+
+.nav-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a5d6a7;
+}
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  .shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  .product-name {
+    font-weight: bold;
+    color: #333;
+  }
+  .product-price {
+    color: #666;
+  }
+  .add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+  }
+  .basket {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+.shop-container, .basket {
+  padding: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,57 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f5e9;
+    color: #333;
+}
+
+.editor-container {
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.editor-header, .editor-footer {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.tasks {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.tasks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tasks li {
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tasks a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tasks a:hover {
+    text-decoration: underline;
+}
+
+.editor-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.editor-footer a:hover {
+    text-decoration: underline;
+}

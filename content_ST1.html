@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="group.css"
+</head>
+<body>
+    <header>
+        <div class="logo"> 
+            <img src="climate_action.png" alt="climate change logo ">
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="#home.htl" class="active"> Home</a></li>
+                <li><a href="https://w2033569.users.ecs.westminster.ac.uk/webDev/content_ST1.html">content 1</a></li>
+                <li><a href="https://w2033569.users.ecs.westminster.ac.uk/webDev/content_ST1.html">content 2</a></li>
+                <li><a href="content3.html">content 3</a></li>
+                <li><a href="https://w1990724.users.ecs.westminster.ac.uk/UNI%20WEBDEV%20CW/gallery.html#feedback1">content 4</a></li>
+            </ul>
+        </nav>
+    <div class="navbar">
+        <div class="nav-brand">Climate Action</div>
+        <div class="nav-links">
+            <a href="#introduction">Introduction</a>
+            <a href="#issues">Issues</a>
+            <a href="#goals">Goals</a>
+            <a href="#actions">Actions</a>
+            <a href="#progress">Progress</a>
+        </div>
+    </div>
+    </header>
+    <main>
+        <section class="mission".>
+            <h1> Our Mission</h1>
+            <p> Welcome to our climate Change Website. We are commited to identifying and reducing the effects of climate change on our planet</p>
+        </section>
+    </main>
+
+    
+    
+
+    <section id="introduction">
+        <h2>Introduction to Climate Action</h2>
+        <img src="intro.png" alt="Climate Action Introduction Image">
+        <p>Climate action involves efforts to mitigate and adapt to the impacts of climate change. it encompasses reducing greenhouse gas emissions, transitioning to
+            renewable energy, promoting sustainable practices, protecting ecosystems, and fostering resilience in communities. Collective action is crucial to address the urgent challenges
+            of climate change and safeguard the planet for future generations.
+        </p>
+    </section>
+
+    <section id="issues">
+        <h2>Climate Issues We Face</h2>
+        <img src="issues.jpeg" alt="Climate Issues Image">
+        <p>Climate change exacerbates drought frequency, severity, and duration, leading to water scarcity, agricultural losses, and socio-economic hardships.
+         Reduced precipitation patterns and increased evaporation rates amplify droughts, affecting both arid and semi-arid regions worldwide.
+         Agriculture, livestock, and water supplies are severely impacted, triggering food insecurity and conflicts over resources.
+         Droughts also exacerbate wildfires, soil degradation, and desertification, further disrupting ecosystems and biodiversity.
+        Mitigating climate change through emissions reduction, water conservation, sustainable land management, and drought-resistant
+        crop varieties is crucial for mitigating the impacts of drought and ensuring resilience in vulnerable communities</p>
+    </section>
+
+    <section id="goals"> 
+        <h2>Our Goals for Climate Action</h2>
+        <img src="goals.jpeg" alt="Climate Goals Image">
+        <p>
+            Our goals for climate action encompass reducing greenhouse gas emissions to limit global warming to well below 2 degrees Celsius, preferably 1.5 degrees Celsius, compared to pre-industrial levels.
+             This involves transitioning to renewable energy sources, enhancing energy efficiency, promoting sustainable transportation, and implementing nature-based solutions such as afforestation and reforestation.
+              Additionally, we aim to adapt to climate change impacts by building resilient infrastructure, protecting vulnerable communities, and enhancing climate resilience in sectors like agriculture and water resource management.
+               International cooperation, policy innovation, and public engagement are essential to achieving these goals and safeguarding the planet for future generations</p>
+    </section>
+
+    <section id="actions">
+        <h2>Actions to Combat Climate Change</h2>
+        <img src="actions.jpeg" alt="Climate Actions Image">
+        <p> Combatting climate change requires a multifaceted approach.
+         Key actions include transitioning to renewable energy sources such as solar and wind power, implementing energy 
+         efficiency measures, promoting sustainable transportation like electric vehicles and public transit, conserving 
+         forests and restoring degraded ecosystems, enhancing agricultural practices to reduce emissions and increase carbon
+          sequestration, phasing out fossil fuel subsidies, implementing carbon pricing mechanisms, investing in climate-resilient 
+          infrastructure, fostering innovation and technology development, promoting sustainable consumption and lifestyle choices,
+           and fostering international cooperation and partnerships. These actions collectively aim to reduce greenhouse gas emissions,
+            mitigate climate impacts, and build resilience to climate change</p>
+    </section>
+
+    <section id="progress">
+        <h2>Progress in Climate Action</h2>
+        <img src="progress.jpeg" alt="Climate Progress Image">
+        <p>Progress in climate action is evident through increased global awareness, ambitious emissions reduction commitments, and adoption of
+             renewable energy. Countries are setting net-zero targets, investing in green technologies, and implementing policies to limit 
+             emissions from key sectors. Renewable energy capacity continues to grow, surpassing fossil fuels in some regions. Cities are 
+             prioritizing sustainability with green infrastructure and public transportation. Conservation efforts are restoring ecosystems and
+              preserving biodiversity. Despite challenges, international agreements like the Paris Agreement demonstrate collective commitment. 
+              However, urgent action is needed to accelerate efforts, ensure equitable solutions, and safeguard the planet for future generations.</p>
+    </section>
+
+    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">Go to Top</button>
+
+    <script>
+       
+        var mybutton = document.getElementById("goToTopBtn");
+
+        
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+       
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Nadia Islam| <a href= "https://w2033569.users.ecs.westminster.ac.uk/webDev/pageEditor_ST1.html"> link to editor page</a></p>
+    </footer>
+</body>
+</html>

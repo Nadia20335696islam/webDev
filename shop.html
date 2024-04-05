@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Climate Change Products Shop</title>
+    <link rel="stylesheet" href="group.css">
+    <style>
+     
+         h1{
+            font-family: Papyrus, fantasy;
+            color: rgb(49, 86, 49);
+            text-align: center;
+            font-size: 40px;
+            margin: 20px 40px 80px 10px;
+
+        }
+
+        .product {
+            background-color: rgb(223, 205, 217); 
+            margin: 10px 10px 0 0;
+            width: 234px;
+            float:left;
+          }
+
+        .description{
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+            color: black;
+            padding-top: 20px;
+            height: 120px;
+            position: relative;
+        }  
+
+        .container{
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .labelOrder{
+            margin: -75px 10px 0 0;
+            padding-top: 12px;
+            width: 258px;
+            height:460px;
+            background-color: #ccc;
+            float: left;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #order{
+            height: 376px;
+            float: none;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #orderDescription{
+            font-size: 16px;
+            height: 40px;
+        }
+
+        input[type=submit], input[type=reset]{
+            float:right;
+            margin-right: 30px;
+        }
+       
+       
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+     
+        
+
+        <div class="logo"> 
+            <img src="climate_action.png" alt="climate change logo ">
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="#home.html" class="active"> Home</a></li>
+                <li><a href="https://w2033569.users.ecs.westminster.ac.uk/webDev/content_ST1.html">content 1</a></li>
+                <li><a href="https://w1996480.users.ecs.westminster.ac.uk/website/home.html">content 2</a></li>
+                <li><a href="content3.html">content 3</a></li>
+                <li><a href="https://w1990724.users.ecs.westminster.ac.uk/UNI%20WEBDEV%20CW/gallery.html#feedback1">content 4</a></li>
+            </ul>
+        </nav>
+        </header>
+        <main>
+          <section class="mission".>
+              <h1> Our Mission</h1>
+              <p> Welcome to our climate Change Website. We are commited to identifying and reducing the effects of climate change on our planet</p>
+          </section>
+      </main>
+        
+    <div class="container">
+        <h1>Climate Actions Product Shop</h1>
+
+        <!-- Product: Reusable Water Bottle -->
+        <div class="product">
+            <img src="bottle.jpeg" alt="Reusable Water Bottle" id="bottle">
+            <div class="description">Reusable Water Bottle
+                <div class="price" data-base-price="2.50">£2.50</div>
+                <div>
+                    <button onclick="addToBasket('Reusable Water Bottle', 2.50)">Add to Basket</button>
+                    <form>
+                        <label for="productOptions1">Quantity</label><br>
+                        <select name="productOptions1" id="productOptions1" onchange="updateImageAndPrice('bottle')">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+
+                        <input type="radio" name="colour" id="white" value="white">
+                        <label for="white">White</label>
+                        <input type="radio" name="colour" id="pink" value="pink">
+                        <label for="pink">Pink</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product: Reusable Shopping Bag -->
+        <div class="product">
+            <img src="bags.jpeg" alt="Reusable Shopping Bag" id="bag">
+            <div class="description">Reusable Shopping Bag
+                <div class="price" data-base-price="2.50">£2.50</div>
+                <div>
+                    <button onclick="addToBasket('Reusable Shopping Bag', 2.50)">Add to Basket</button>
+                    <form>
+                        <label for="productOptions2">Size</label><br>
+                        <select name="productOptions2" id="productOptions2" onchange="updateImageAndPrice('bag')">
+                            <option value="regular">Regular</option>
+                            <option value="large">Large</option>
+                        </select>
+
+                        <input type="radio" name="colour" id="white" value="white">
+                        <label for="white">White</label>
+                        <input type="radio" name="colour" id="pink" value="pink">
+                        <label for="pink">Pink</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product: Reusable Straw Set -->
+        <div class="product">
+            <img src="straw.jpeg" alt="Reusable Straw Set" id="straw">
+            <div class="description">Reusable Straw Set
+                <div class="price" data-base-price="2.50">£2.50</div>
+                <div>
+                    <button onclick="addToBasket('Reusable Straw Set', 2.50)">Add to Basket</button>
+                    <form>
+                        <label for="productOptions3">Set Size</label><br>
+                        <select name="productOptions3" id="productOptions3" onchange="updateImageAndPrice('straw')">
+                            <option value="smallSet">Small Set</option>
+                            <option value="largeSet">Large Set</option>
+                        </select>
+
+                        <input type="radio" name="colour" id="white" value="white">
+                        <label for="white">White</label>
+                        <input type="radio" name="colour" id="pink" value="pink">
+                        <label for="pink">Pink</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your Order section -->
+        <div class="labelOrder">
+            <h2>Basket:</h2>
+            <div id="orderDescription">The description of your order</div>
+        </div>
+
+        <!-- Place your order and Reset buttons -->
+        <div>
+            <form onsubmit="return placeOrder()">
+                <input type="submit" value="Place your order" name="button">
+            </form>
+            <form>
+                <input type="reset" name="button" value="Reset" onclick="resetOrder()">
+            </form>
+        </div>
+
+        <!-- JavaScript code -->
+        <script>
+            var order = [];
+
+            function addToBasket(productName, price) {
+                var quantity = parseInt(document.getElementById('productOptions1').value);
+                var color = document.querySelector('input[name="colour"]:checked') ? document.querySelector('input[name="colour"]:checked').value : 'N/A';
+
+                // Calculate total price based on quantity
+                var totalPrice = price * quantity;
+
+                order.push({ productName, quantity, color, price: totalPrice });
+                updateBasketDescription();
+                alert('Added ' + quantity + ' ' + productName + '(s) to basket. Total Price: £' + totalPrice.toFixed(2));
+            }
+
+            function updateBasketDescription() {
+                var basketDescription = document.getElementById('orderDescription');
+                var total = 0;
+
+                basketDescription.innerHTML = 'Basket:<br>';
+                order.forEach(item => {
+                    var itemDiv = document.createElement('div');
+                    itemDiv.innerHTML = item.quantity + ' ' + item.productName + '(s) - Color: ' + item.color + ' - Price: £' + item.price.toFixed(2);
+                    basketDescription.appendChild(itemDiv);
+                    total += item.price; // Update total price
+                });
+                if (order.length > 0) {
+                    basketDescription.innerHTML += '<br>Total: £' + total.toFixed(2); // Display total price
+                }
+            }
+
+            function resetOrder() {
+                order = [];
+                updateBasketDescription();
+            }
+
+            function placeOrder() {
+                if (order.length === 0) {
+                    alert('Please select an item before placing your order');
+                    return false;
+                } else {
+                    // Redirect to another page
+                    window.location.href = 'https://w2033569.users.ecs.westminster.ac.uk/webDev/form.html';
+                    return false;
+                }
+            }
+
+            // Function to update image based on selected quantity or size
+            function updateImageAndPrice(productName) {
+                var quantity = parseInt(document.getElementById('productOptions1').value);
+                var size = document.getElementById('productOptions2').value;
+                var setSize = document.getElementById('productOptions3').value;
+                var image = document.getElementById(productName);
+
+                // Change image source based on quantity/size selection
+                if (productName === 'bottle') {
+                    if (quantity === 2) {
+                        image.src = 'bottle.jpeg';
+                    } else {
+                        image.src = 'white.jpeg';
+                    }
+                } else if (productName === 'bag') {
+                    if (size === 'large') {
+                        image.src = 'bigBag.jpeg';
+                    } else {
+                        image.src = 'bags.jpeg';
+                    }
+                } else if (productName === 'straw') {
+                    if (setSize === 'largeSet') {
+                        image.src = 'bambooStraw.jpeg';
+                    }
+                    else {
+                        image.src = 'straw.jpeg';
+                    }
+                }
+
+                // Update price based on quantity
+                var basePrice = parseFloat(document.querySelector('.description .price').getAttribute('data-base-price'));
+                var totalPrice = basePrice * quantity;
+                document.querySelector('.description .price').textContent = '£' + totalPrice.toFixed(2);
+
+                // Update the total price in the basket
+                updateBasketDescription();
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
